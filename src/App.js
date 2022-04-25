@@ -19,6 +19,7 @@ export default function App() {
       completed: true,
     },
   ]);
+
   return (
     <div id="App">
       <form>
@@ -27,7 +28,9 @@ export default function App() {
         <button>Add Task</button>
       </form>
       <ul>
-        <ListItem />
+        {tasks.map((task) => (
+          <ListItem {...task} />
+        ))}
       </ul>
     </div>
   );

@@ -1,7 +1,7 @@
 export default function ListItem(props) {
   return (
-    <li>
-      Do the dishes <button>Delete</button>
+    <li className={props.completed ? "completed" : ""}>
+      {props.task} <button>Delete</button>
     </li>
   );
 }
