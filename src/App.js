@@ -19,7 +19,9 @@ export default function App() {
       completed: true,
     },
   ]);
-
+  function deleteItem(id) {
+    setTasks((oldState) => oldState.filter((item) => item.id !== id));
+  }
   return (
     <div id="App">
       <form>
@@ -29,7 +31,7 @@ export default function App() {
       </form>
       <ul>
         {tasks.map((task) => (
-          <ListItem {...task} />
+          <ListItem deleteItem={deleteItem} {...task} />
         ))}
       </ul>
     </div>
