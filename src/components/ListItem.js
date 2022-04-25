@@ -8,10 +8,10 @@ export default function ListItem(props) {
   }
   return (
     <li className={props.completed ? "completed" : ""}>
-      {props.task}{" "}
+      {props.task}
       <button onClick={handleCompletion}>
         {props.completed ? "Undo" : "Complete"}
-      </button>{" "}
+      </button>
       <button onClick={handleDelete}>Delete</button>
     </li>
   );
